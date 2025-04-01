@@ -1,0 +1,122 @@
+:root {
+  --primary-color: #38707d;
+  --secondary-color: #4a5b0b;
+  --accent1-color: #566b1c;
+  --accent2-color: #72a4a8;
+  --accent3-color: #d9e0ea;
+  --heading-text: Roboto Slab;
+  --paragraph-text: Roboto;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 10rem;
+}
+
+header {
+  height: max-content;
+  width: 100%;
+}
+
+header > div.logo-wrapper > img {
+  height: auto;
+  width: 10rem;
+}
+
+header > nav > a {
+  text-decoration: none;
+}
+
+div.hero {
+  position: relative;
+  height: 80rem;
+  width: auto;
+}
+
+div.hero img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+div.hero > h1 {
+  position: absolute;
+  width: 96.5%;
+  top: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3rem;
+  background-color: #333333aa;
+  text-align: center;
+  font-family: var(--heading-text);
+  font-size: 5rem;
+  font-weight: 200;
+  color: var(--accent3-color);
+}
+
+div.hero > article {
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe88;
+  padding: 2.5rem;
+}
+
+div.hero > article > img {
+  float: right;
+  height: auto;
+  width: 25rem;
+}
+
+section.history-section > h2,
+section.adventure-section > h2 {
+  font-family: var(--heading-text);
+  font-size: 4rem;
+  color: var(--secondary-color);
+}
+
+section.adventure-section > img {
+  display: block;
+}
+
+section.adventure-section > h4.adventure-heading {
+  font-size: 1.6rem;
+  color: var(--accent1-color);
+  margin: 0.5rem 0;
+}
+
+p.copyright {
+  font-size: 1.4rem;
+  color: var(--accent2-color);
+  margin: 0.5rem 0;
+}
+
+nav.social-links > a {
+  display: inline-block;
+  height: auto;
+  width: 4rem;
+}
+
+nav.social-links > a > img {
+  height: auto;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--primary-color);
+}
+
+nav.social-links > a {
+  text-decoration: none;
+}
