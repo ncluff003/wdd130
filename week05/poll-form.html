@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WDD 130 | Nathan Cluff | HTML Form - User Poll</title>
+  <meta name="author" content="Nathan Cluff">
+  <meta name="description" content="A Poll Form Example">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./styles/poll-form.css">
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+  <header>
+    <h1>WDD 130 | Nathan Cluff | HTML Form - User Poll</h1>
+  </header>
+  <main>
+    <form>
+      <fieldset class="contact-fields">
+        <legend>Contact Information</legend>
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" id="fullname">
+        <label for="useremail">Email:</label>
+        <input type="text" name="useremail" id="useremail">
+      </fieldset>
+      <fieldset class="question-fields">
+        <legend>Questions</legend>
+        <label for="browser">What is your favorite internet browser?</label>
+        <select name="browser" id="browser" title="browser">
+          <option value="chrome">Chrome</option>
+          <option value="firefox">Firefox</option>
+          <option value="safari">Safari</option>
+          <option value="edge">Edge</option>
+          <option value="brave">Brave</option>
+          <option value="other">Other</option>
+        </select>
+        <label for="pet">Do you have a household pet?</label>
+        <input type="checkbox" name="pet" id="pet" title="pet">
+        <label for="feedback">List the places you have lived:</label>
+        <textarea name="feedback" id="feedback" placeholder="Dallas Texas, Orlando Florida, Portland Oregon"
+          rows="4"></textarea>
+      </fieldset>
+      <button type="submit" class="submit">Submit Poll</button>
+    </form>
+  </main>
+  <footer>
+    <p>©️ 2025 | HTML Form - User Poll Activity | Nathan Cluff</p>
+  </footer>
+
+  <!-- <script src="" async defer></script> -->
+</body>
+
+</html>

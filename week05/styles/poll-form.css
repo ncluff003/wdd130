@@ -1,0 +1,158 @@
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  box-sizing: border-box;
+
+  font-family: Roboto, sans-serif;
+  font-size: 1.6rem;
+  color: #333;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: center;
+}
+
+header {
+  position: relative;
+  height: 10rem;
+  width: 100%;
+  padding: 0rem;
+  margin: 0 0 0 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header h1 {
+  font-family: Roboto Slab, serif;
+  font-size: 3rem;
+  color: darkblue;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 30% 1fr 15%;
+  height: min-content;
+  width: min-content;
+  padding: 3rem;
+  border: 0.1rem solid #1a1a1aaa;
+  border-radius: 1rem;
+  background-color: #dddddd;
+}
+
+form > fieldset.contact-fields,
+form > fieldset.question-fields {
+  display: grid;
+  width: 40rem;
+}
+
+form > fieldset.contact-fields {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem 0;
+  margin: 0 0 4rem 0;
+  height: max-content;
+  padding: 1rem;
+}
+
+form > fieldset.question-fields {
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0;
+  height: max-content;
+  padding: 1rem;
+}
+
+form > fieldset.contact-fields > legend,
+form > fieldset.question-fields > legend {
+  font-family: Roboto Slab, serif;
+  font-size: 2rem;
+  color: darkblue;
+  transform: translateY(-0.25rem);
+  padding: 0 0.5rem;
+}
+
+form > fieldset.contact-fields > label,
+form > fieldset.question-fields > label {
+  font-family: Roboto, sans-serif;
+  font-size: 1.6rem;
+  color: #1a1a1a;
+  text-align: right;
+  padding-right: 1rem;
+  align-self: center;
+}
+
+form > fieldset.contact-fields > input,
+form > fieldset.question-fields > input,
+form > fieldset.question-fields > select {
+  position: relative;
+  height: max-content;
+  width: max-content;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+}
+
+form > fieldset.question-fields > select,
+form > fieldset.question-fields > input[type="checkbox"] {
+  align-self: center;
+}
+
+form > fieldset.question-fields > input[type="checkbox"] {
+  position: relative;
+  height: 2rem;
+  width: 2rem;
+}
+
+form > fieldset.question-fields > textarea {
+  position: relative;
+  grid-column: 1 / -1;
+  grid-row: 4;
+  height: 5rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+form > button.submit {
+  position: relative;
+  height: 4rem;
+  width: max-content;
+  padding: 1rem;
+  justify-self: center;
+  align-self: center;
+  font-family: Roboto, sans-serif;
+  font-size: 1.6rem;
+  background-color: darkblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid #333333aa;
+  border-radius: 0.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  color: #333333;
+  height: max-content;
+  width: 25%;
+  padding: 2rem;
+}
