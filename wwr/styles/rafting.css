@@ -26,16 +26,21 @@ html {
 body {
   position: relative;
   box-sizing: border-box;
-  margin: 0 10rem;
+  margin: 0;
 }
 
 header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
   height: max-content;
   width: 100%;
   display: grid;
   grid-template-columns: 200px 1fr 1fr;
   align-items: center;
-  margin: 1.6rem 4rem;
+  padding: 1.6rem 4rem;
+  background-color: #d9e0eabb;
 }
 
 header > div.logo-wrapper > img {
@@ -69,7 +74,7 @@ div.hero img {
 div.hero > h1 {
   position: absolute;
   width: 100%;
-  top: 4rem;
+  top: 11rem;
   left: 50%;
   transform: translateX(-50%);
   padding: 3rem;
@@ -79,6 +84,36 @@ div.hero > h1 {
   font-size: 5rem;
   font-weight: 200;
   color: var(--accent3-color);
+}
+
+div.hero > div.cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333333aa;
+  padding: 2.5rem;
+  text-align: center;
+  font-family: var(--heading-text);
+  font-size: 2rem;
+}
+
+div.hero > div.cta > h2 {
+  font-size: 3rem;
+  color: var(--accent3-color);
+  margin-bottom: 2rem;
+}
+
+div.hero > div.cta > a.button {
+  background-color: var(--accent1-color);
+  color: var(--accent3-color);
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
 }
 
 div.hero > article {
@@ -105,6 +140,150 @@ div.hero > article > img {
 div.hero > article > h4 {
   font-size: 2rem;
   color: #fefefe;
+}
+
+section.offerings {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 21.75% 1fr;
+  grid-template-rows: 1fr;
+  gap: 0 10rem;
+  padding: 15rem 0;
+}
+
+section.offerings > article.offerings_card {
+  position: relative;
+  height: auto;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--accent3-color);
+  border-radius: 1.5rem;
+
+  font-size: 3rem;
+  color: var(--accent1-color);
+}
+
+section.offerings > article.offerings_card.one {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: end;
+}
+section.offerings > article.offerings_card.two {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+section.offerings > article.offerings_card.one > img,
+section.offerings > article.offerings_card.two > img,
+section.offerings > article.offerings_card.three > img {
+  height: 25rem;
+  width: auto;
+  margin: 0 0 2rem;
+}
+
+section.offerings > article.offerings_card.three {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: start;
+}
+
+section.subscription {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+  background-color: var(--accent2-color);
+}
+
+section.subscription > img {
+  position: relative;
+  height: auto;
+  width: 80rem;
+  margin: 0 0 2rem;
+  border-radius: 1.5rem;
+}
+
+section.subscription > div.subscription_form-container {
+  position: relative;
+  height: max-content;
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  background-color: #4a5b0bcc;
+  transform: translateX(-15rem);
+  border-radius: 2rem;
+}
+
+section.subscription > div.subscription_form-container > h2 {
+  font-family: var(--heading-text);
+  font-size: 3rem;
+  color: #d9e0ea88;
+  margin: 2rem 0;
+}
+
+section.subscription > div.subscription_form-container > form {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 1rem 0;
+  padding: 2rem;
+  background-color: var(--accent3-color);
+  border-radius: 1.5rem;
+}
+
+section.subscription > div.subscription_form-container > form > label {
+  width: max-content;
+  font-size: 1.6rem;
+  color: var(--accent1-color);
+  margin: 0;
+  align-self: center;
+  justify-self: center;
+  margin-right: 1rem;
+}
+
+section.subscription > div.subscription_form-container > form > input {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  justify-self: start;
+}
+
+section.subscription > div.subscription_form-container > form > button {
+  grid-column: 1 / -1;
+  grid-row: 3 / span 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  background-color: var(--accent1-color);
+  height: 4rem;
+  width: 40%;
+  justify-self: center;
+  align-self: center;
+
+  border-radius: 1rem;
+  font-size: 2rem;
+  color: var(--accent3-color);
+  cursor: pointer;
 }
 
 section.history-section {
@@ -496,6 +675,143 @@ section.contact-form-container > form.contact-form-container_form > button.conta
   font-size: 2rem;
   color: var(--accent3-color);
   cursor: pointer;
+}
+
+section.featured-trips {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 15rem 0 0;
+}
+
+section.featured-trips > h1 {
+  font-family: var(--heading-text);
+  font-size: 4rem;
+  color: var(--secondary-color);
+  margin: 2rem 0;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+section.featured-trips > section.featured-trips_card {
+  position: relative;
+  min-height: 50rem;
+  height: max-content;
+  width: 60rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 2rem;
+  background-color: var(--accent3-color);
+  border-radius: 1.5rem;
+}
+
+section.featured-trips > section.featured-trips_card > img {
+  height: auto;
+  width: 100%;
+  margin: 0 0 2rem;
+}
+
+section.featured-trips > section.featured-trips_card > h2 {
+  font-size: 2.4rem;
+  color: var(--accent1-color);
+  margin: 0.5rem 0;
+}
+
+section.featured-trips > section.featured-trips_card > p {
+  font-size: 1.6rem;
+  color: var(--accent1-color);
+  margin: 0.5rem 0;
+}
+
+section.trip-table-container {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+section.trip-table-container > h2 {
+  font-family: var(--heading-text);
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin: 2rem 0;
+}
+
+section.trip-table-container > table {
+  position: relative;
+  height: max-content;
+  width: 40%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, max-content);
+  gap: 0.5rem 0;
+  padding: 2rem;
+  background-color: var(--accent3-color);
+  border-radius: 1.5rem;
+}
+
+section.trip-table-container > table > thead {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+section.trip-table-container > table > thead > tr {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2rem;
+  color: var(--accent1-color);
+  padding: 0 0 1rem;
+  border-bottom: 0.2rem solid var(--accent1-color);
+}
+
+section.trip-table-container > table > tbody {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+section.trip-table-container > table > tbody > tr {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.6rem;
+  color: var(--accent1-color);
+}
+
+section.trip-table-container > table > tbody > tr > td {
+  position: relative;
+  height: max-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 footer {
