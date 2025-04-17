@@ -37,11 +37,70 @@
     </nav>
   </header>
   <main>
-
+    <section class="company-information">
+      <h1 class="company-information_header">Contact Us</h1>
+      <p class="company-information_address">1861 N Hwy 191 #9623, Moab, UT 84532</p>
+      <p class="company-information_phone-number">(000) 123 - 4567</p>
+      <p class="company-information_email">rar@email.com</p>
+      <div class="company-information_map-container"><iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2285.942668941873!2d-109.58084032133159!3d38.60446319254738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1744837004288!5m2!1sen!2sus"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </section>
+    <section class="team-information">
+      <h2 class="team-information_header">Meet The Team Leads</h2>
+      <div class="team-information_employee-card-container">
+        <article class="team-information_employee-card-container_card">
+          <img src="./images/lead-guide-Jasmine.jpg" alt="Jasmine Johnson" class="employee-photo">
+          <h3 class="employee-name">Jasmine Johnson | Lead Guide</h3>
+        </article>
+        <article class="team-information_employee-card-container_card">
+          <img src="./images/lead-reservation-coordinator-Julie.jpg" alt="Julie Gonzales" class="employee-photo">
+          <h3 class="employee-name">Julie Gonzales | Lead Reservation Coordinator</h3>
+        </article>
+        <article class="team-information_employee-card-container_card">
+          <img src="./images/lead-safety-instructor-Sean.jpg" alt="Sean Roberts" class="employee-photo">
+          <h3 class="employee-name">Sean Roberts | Lead Safety Instructor</h3>
+        </article>
+      </div>
+    </section>
+    <section class="contact-form-container">
+      <h2 class="contact-form-container_header">Get In Touch</h2>
+      <form class="contact-form-container_form">
+        <fieldset class="contact-form-container_form_contact-information">
+          <legend>Contact Information</legend>
+          <label for="fullname" class="full-name">Full Name:</label>
+          <input type="text" name="fullname" id="fullname" required>
+          <label for="useremail" class="email">Email:</label>
+          <input type="email" name="useremail" id="useremail" required>
+        </fieldset>
+        <fieldset class="contact-form-container_form_input-type">
+          <legend>Message's Purpose</legend>
+          <label for="general-inquiry" class="general-inquiry">General Inquiry</label>
+          <input type="radio" name="message-purpose" id="general-inquiry" value="general-inquiry" required>
+          <label for="reservation-question" class="reservation-question">Reservation Question</label>
+          <input type="radio" name="message-purpose" id="reservation-question" value="reservation-question" required>
+          <label for="website-suggestion" class="website-suggestion">Website Suggestion</label>
+          <input type="radio" name="message-purpose" id="website-suggestion" value="website-suggestion" required>
+        </fieldset>
+        <fieldset class="contact-form-container_form_message">
+          <label for="message" class="message">Message</label>
+          <textarea name="message" id="message" placeholder="Type your message here..." rows="4" required></textarea>
+        </fieldset>
+        <fieldset class="contact-form-container_form_subscription">
+          <legend>Subscription</legend>
+          <label for="subscribe" class="subscription">Please subscribe me to the monthly newsletter</label>
+          <input type="checkbox" name="subscribe" id="subscribe">
+        </fieldset>
+        <button class="contact-form-container_submit-button" type="submit">Submit</button>
+      </form>
+    </section>
   </main>
   <footer>
     <p class="copyright">©️ 2025 Rapid Adventure Rafting | Nathan Cluff</p>
     <nav class="social-links">
+      <a href="https://app.moqups.com/4vriS1HaKBXJdj3L0WGKWeHEkdazOPwY/view/page/ad64222d5" id="wireframe">Contact
+        Us Wireframe</a>
       <a href="https://www.facebook.com">
         <img src="./images/facebook-logo.svg" alt="Facebook">
       </a>
